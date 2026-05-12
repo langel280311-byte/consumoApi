@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginacion de api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Productos</h1>
+
+    <!-- Input de búsqueda: app.js escucha el evento "input" en tiempo real -->
+    <input type="text" id="buscar" placeholder="Buscar productos...">
+
+    <!-- Contenedor: UI.js inyecta aquí el HTML de las cards dinámicamente -->
+    <div id="contenedor"></div>
+
+    <div class="botones">
+        <div id="botones">
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+        </div>
+    </div>
+
+    <!--
+        type="module" es OBLIGATORIO para que funcionen los import/export.
+        Sin esto, el navegador no reconoce la sintaxis de módulos y lanza error.
+        La ruta apunta a app.js, que es el punto de entrada;
+        él mismo se encarga de importar ProductoAPI.js y UI.js.
+    -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
